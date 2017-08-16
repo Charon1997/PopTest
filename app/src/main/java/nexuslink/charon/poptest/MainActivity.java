@@ -22,20 +22,20 @@ public class MainActivity  extends AppCompatActivity implements IMainView,View.O
     private Button mBt;
     private IMainView mainView = this;
     private MPopWindow mPopWindow;
-    private int layout[] = {R.layout.activity_main,R.layout.activity_mode2};
-    private int door[] = {R.id.main_mode1_door, R.id.main_mode2_door};
-    private int animArrayImg[] = {R.id.main_anim_mode1_img,R.id.main_anim_mode2_img};
-    private int background[] = {};
+    private int layout[] = {R.layout.activity_main,R.layout.activity_mode2,R.layout.activity_mode3};
+    private int door[] = {R.id.main_mode1_door, R.id.main_mode2_door,R.id.main_mode3_door};
+    private int animArrayImg[] = {R.id.main_anim_mode1_img,R.id.main_anim_mode2_img,R.id.main_anim_mode3_img};
+    private int animButton[] = {R.id.main_mode1_button,R.id.main_mode2_button,R.id.main_mode3_button};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         chooseMode(0);
-        mPopWindow = new MPopWindow(this,mainView);
+        mPopWindow = new MPopWindow(this,mainView,mBt);
     }
     @Override
     public void onClick(View v) {
-                mPopWindow.showPopupWindow(LayoutInflater.from(this).inflate(R.layout.activity_main, null));
+        mPopWindow.showPopupWindow(LayoutInflater.from(this).inflate(R.layout.activity_main, null));
     }
 
     @Override
@@ -48,11 +48,15 @@ public class MainActivity  extends AppCompatActivity implements IMainView,View.O
             case 0:
                 //比例系数
                 width *= 0.7575;
-                height *=0.38;
+                height *= 0.38;
                 break;
             case 1:
                 width *= 0.44;
-                height *=0.48;
+                height *= 0.48;
+                break;
+            case 2:
+                width *= 0.31;
+                height *= 0.4;
                 break;
         }
 
@@ -84,8 +88,8 @@ public class MainActivity  extends AppCompatActivity implements IMainView,View.O
         setContentView(layout[position]);
         mIv = (ImageView) findViewById(door[position]);
         animImg = (ImageView) findViewById(animArrayImg[position]);
-
-        mIv.setOnClickListener(this);
+        mBt = (Button) findViewById(animButton[position]);
+        mBt.setOnClickListener(this);
     }
 
     private void anim(int x, int y, float width, float height, float scaleX, float scaleY) {

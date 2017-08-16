@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mode2">
+    android:background="@drawable/mode3">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -10,27 +10,27 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="17.40"/>
+            android:layout_weight="9.32"/>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="77.95">
+            android:layout_weight="74.61">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="38.59"/>
+                android:layout_weight="23.94"/>
 
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="20">
+                android:layout_weight="22.57">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/door1"/>
                 <ImageView
-                    android:id="@+id/main_mode2_door"
+                    android:id="@+id/main_mode3_door"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"/>
@@ -39,22 +39,22 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="41.36"/>
+                android:layout_weight="53.66"/>
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4.56"/>
+            android:layout_weight="16.71"/>
     </LinearLayout>
     <ImageView
         android:visibility="invisible"
         android:layout_marginStart="17dp"
-        android:id="@+id/main_anim_mode2_img"
-        android:src="@drawable/door2"
+        android:id="@+id/main_anim_mode3_img"
+        android:src="@drawable/door3"
         android:layout_width="28dp"
         android:layout_height="60dp" />
     <Button
-        android:id="@+id/main_mode2_button"
+        android:id="@+id/main_mode3_button"
         android:text="点我"
         android:layout_width="50dp"
         android:layout_height="30dp"
