@@ -1,4 +1,4 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.ui.adapter.viewpager;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

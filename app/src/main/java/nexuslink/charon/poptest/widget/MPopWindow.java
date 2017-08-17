@@ -1,8 +1,5 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.widget;
 
-import android.animation.Animator;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
@@ -14,12 +11,19 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.PopupWindow;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import nexuslink.charon.poptest.ui.activity.IMainView;
+import nexuslink.charon.poptest.R;
+import nexuslink.charon.poptest.model.ItemBean;
+import nexuslink.charon.poptest.ui.adapter.recyclerview.RecDoorAdapter;
+import nexuslink.charon.poptest.ui.adapter.recyclerview.RecModeAdapter;
+import nexuslink.charon.poptest.ui.adapter.viewpager.NoScrollViewPager;
+import nexuslink.charon.poptest.ui.adapter.viewpager.PopViewpager;
 
 /**
  * 项目名称：PopTest
@@ -32,7 +36,7 @@ import java.util.List;
  */
 
 
-class MPopWindow extends PopupWindow {
+public class MPopWindow extends PopupWindow {
     private static final String TAG = MPopWindow.class.getSimpleName();
     public Context mContext;
     private List<View> list;
@@ -46,11 +50,10 @@ class MPopWindow extends PopupWindow {
     private TabLayout mTL;
     private NoScrollViewPager mVp;
     private IMainView mainView;
-    private Button button;
+    //private Button button;
 
-    public MPopWindow(Context context, IMainView mainView, Button button) {
+    public MPopWindow(Context context, IMainView mainView) {
         this.mainView = mainView;
-        this.button = button;
         initView(context);
     }
 
@@ -127,16 +130,16 @@ class MPopWindow extends PopupWindow {
     }
 
     public void showPopupWindow(View parent) {
-        float height = ScreenUtils.dip2px(mContext, 148);
+        //float height = ScreenUtils.dip2px(mContext, 148);
         if (!this.isShowing()) {
             //动画
             Log.d(TAG, "showPopupWindow: show");
-            AnimatorSet set = new AnimatorSet();
-            ObjectAnimator ob1 = ObjectAnimator.ofFloat(button, "TranslationY", 0, -height);
-            ObjectAnimator ob2 = ObjectAnimator.ofFloat(button, "rotation", 0, 180);
-            set.playTogether(ob1, ob2);
-            set.setDuration(300);
-            set.start();
+//            AnimatorSet set = new AnimatorSet();
+//            ObjectAnimator ob1 = ObjectAnimator.ofFloat(button, "TranslationY", 0, -height);
+//            ObjectAnimator ob2 = ObjectAnimator.ofFloat(button, "rotation", 0, 180);
+//            set.playTogether(ob1, ob2);
+//            set.setDuration(300);
+//            set.start();
             this.showAtLocation(parent, Gravity.BOTTOM, 0, 0);
         } else {
             Log.d(TAG, "showPopupWindow: close");

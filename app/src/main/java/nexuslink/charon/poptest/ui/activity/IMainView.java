@@ -1,7 +1,6 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.ui.activity;
 
 import android.content.Context;
-import android.view.ViewGroup;
 
 /**
  * 项目名称：PopTest

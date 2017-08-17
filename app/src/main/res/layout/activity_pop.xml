@@ -9,11 +9,11 @@
             android:background="@color/halfWhite">
         </android.support.design.widget.TabLayout>
 
-    <nexuslink.charon.poptest.NoScrollViewPager
+    <nexuslink.charon.poptest.ui.adapter.viewpager.NoScrollViewPager
         android:id="@+id/pop_viewpager"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/halfWhite">
-    </nexuslink.charon.poptest.NoScrollViewPager>
+    </nexuslink.charon.poptest.ui.adapter.viewpager.NoScrollViewPager>
 
 </LinearLayout>

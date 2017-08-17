@@ -53,12 +53,4 @@
         android:src="@drawable/door2"
         android:layout_width="28dp"
         android:layout_height="60dp" />
-    <Button
-        android:id="@+id/main_mode2_button"
-        android:text="点我"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/halfWhite"/>
 </RelativeLayout>

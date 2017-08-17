@@ -1,4 +1,4 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.ui.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -10,28 +10,28 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.Button;
 import android.widget.ImageView;
+import nexuslink.charon.poptest.widget.MPopWindow;
+import nexuslink.charon.poptest.R;
+import nexuslink.charon.poptest.utils.ScreenUtils;
 
-import static nexuslink.charon.poptest.Constant.DURATION;
+import static nexuslink.charon.poptest.config.Constant.DURATION;
 
 public class MainActivity  extends AppCompatActivity implements IMainView,View.OnClickListener{
     private static final String TAG = MainActivity.class.getSimpleName();
     public static int mode;
     private ImageView mIv,animImg;
-    private Button mBt;
     private IMainView mainView = this;
     private MPopWindow mPopWindow;
     private int layout[] = {R.layout.activity_main,R.layout.activity_mode2,R.layout.activity_mode3};
     private int door[] = {R.id.main_mode1_door, R.id.main_mode2_door,R.id.main_mode3_door};
     private int animArrayImg[] = {R.id.main_anim_mode1_img,R.id.main_anim_mode2_img,R.id.main_anim_mode3_img};
-    private int animButton[] = {R.id.main_mode1_button,R.id.main_mode2_button,R.id.main_mode3_button};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         chooseMode(0);
-        mPopWindow = new MPopWindow(this,mainView,mBt);
+        mPopWindow = new MPopWindow(this,mainView);
     }
     @Override
     public void onClick(View v) {
@@ -52,10 +52,10 @@ public class MainActivity  extends AppCompatActivity implements IMainView,View.O
                 break;
             case 1:
                 width *= 0.44;
-                height *= 0.48;
+                height *= 0.49;
                 break;
             case 2:
-                width *= 0.31;
+                width *= 0.3;
                 height *= 0.4;
                 break;
         }
@@ -88,8 +88,8 @@ public class MainActivity  extends AppCompatActivity implements IMainView,View.O
         setContentView(layout[position]);
         mIv = (ImageView) findViewById(door[position]);
         animImg = (ImageView) findViewById(animArrayImg[position]);
-        mBt = (Button) findViewById(animButton[position]);
-        mBt.setOnClickListener(this);
+        //mBt = (Button) findViewById(animButton[position]);
+        mIv.setOnClickListener(this);
     }
 
     private void anim(int x, int y, float width, float height, float scaleX, float scaleY) {

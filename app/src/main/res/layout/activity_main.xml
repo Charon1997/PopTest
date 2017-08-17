@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context="nexuslink.charon.poptest.MainActivity">
+    tools:context="nexuslink.charon.poptest.ui.activity.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -54,14 +54,6 @@
 
         </RelativeLayout>
     </LinearLayout>
-    <Button
-        android:id="@+id/main_mode1_button"
-        android:text="点我"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/halfWhite"/>
     <ImageView
         android:visibility="invisible"
         android:layout_marginStart="17dp"

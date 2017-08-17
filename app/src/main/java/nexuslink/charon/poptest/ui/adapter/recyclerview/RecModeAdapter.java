@@ -1,4 +1,4 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.ui.adapter.recyclerview;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +11,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
+
+import nexuslink.charon.poptest.ui.activity.IMainView;
+import nexuslink.charon.poptest.R;
+import nexuslink.charon.poptest.model.ItemBean;
 
 /**
  * 项目名称：PopTest

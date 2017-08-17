@@ -1,4 +1,4 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;

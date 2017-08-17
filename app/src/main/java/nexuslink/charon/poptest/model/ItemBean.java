@@ -1,4 +1,4 @@
-package nexuslink.charon.poptest;
+package nexuslink.charon.poptest.model;
 
 /**
  * 项目名称：PopTest
